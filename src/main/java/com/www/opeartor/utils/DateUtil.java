@@ -20,8 +20,6 @@ public class DateUtil {
 	}
 
 
-	public static String getTest2(){
-		return null;
-	}
+
 
 }
