@@ -15,11 +15,6 @@ public class DateUtil {
 		return dateFormat.format(new Date());
 	}
 
-	public static String getTest(){
-		return null;
-	}
-
-
 
 
 }
