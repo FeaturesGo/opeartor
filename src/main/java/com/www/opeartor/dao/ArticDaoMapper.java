@@ -1,11 +1,10 @@
 package com.www.opeartor.dao;
 
-import java.util.List;
-
+import com.www.opeartor.entity.Artic;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-import com.www.opeartor.entity.Artic;
+import java.util.List;
 
 @Repository
 public interface ArticDaoMapper {
