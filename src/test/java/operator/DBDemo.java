@@ -16,5 +16,7 @@ public class DBDemo {
 		
 		System.out.println(dbParamUtil.getParam());
 	}*/
+    public static void main(String[] args) {
 
+    }
 }
