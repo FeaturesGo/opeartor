@@ -3,16 +3,12 @@ package com.www.opeartor.entity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import com.www.opeartor.core.annotate.CustomTable;
-import com.www.opeartor.core.entity.CommonEntity;
-
 /***
  * 联系我们的提交表单
- * @author hwg
+ * @author wangweiwei
  *
  */
-@CustomTable(tableName="op_tourist")
-public class Tourist extends CommonEntity{
+public class Tourist {
 
 	private Integer id;
 	

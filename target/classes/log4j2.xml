@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <Configuration>
 	<Properties>
 		<!-- 日记记录的目录 -->
@@ -9,7 +8,7 @@
 		<Console name="console" target="SYSTEM_OUT">
 			<PatternLayout charset="UTF-8" pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}][%t][%-5p][%F:%L] - [%m]%n" />
 		</Console>
-		<RollingFile name="sizeRollingFile_withDateSuffix" fileName="${logFileDir}operator.log" filePattern="${logFileDir}operator.%d{yyyy-MM-dd-HH-mm-ss}.log">
+		<RollingFile name="datailFile" fileName="${logFileDir}operator.log" filePattern="${logFileDir}operator.%d{yyyy-MM-dd-HH-mm-ss}.log">
 			<PatternLayout charset="UTF-8" pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}][%t][%-5p][%F:%L] - [%m]%n" />
 			<Policies>
 				<!-- 按大小分割 size为大小间隔-->
@@ -19,9 +18,23 @@
 		</RollingFile>
 	</Appenders>
 	<Loggers>
-		<Root level="INFO">
+		<logger name="com.www.opeartor.dao" level="INFO"/>
+		<logger name="druid.sql.DataSource">
+			<level value="info" />
+		</logger>
+		<logger name="druid.sql.Connection">
+			<level value="DEBUG" />
+		</logger>
+		<logger name="druid.sql.ResultSet">
+			<level value="DEBUG" />
+		</logger>
+		<!-- 打印SQL语句 -->
+		<logger name="druid.sql.Statement">
+			<level value="DEBUG" />
+		</logger>
+		<Root level="DEBUG">
 			<Appender-ref ref="console"/>
-			<Appender-ref ref="sizeRollingFile_withDateSuffix"/>
+			<Appender-ref ref="datailFile"/>
 		</Root>
 	</Loggers>
 </Configuration>

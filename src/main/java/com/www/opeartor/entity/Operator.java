@@ -3,10 +3,6 @@ package com.www.opeartor.entity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-/**
- * 用户
- * @author hwg
- */
 public class Operator {
 	
 	private String userName;

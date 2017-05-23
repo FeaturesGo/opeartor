@@ -1,18 +1,12 @@
 package com.www.opeartor.entity;
 
-import com.www.opeartor.core.annotate.CustomTable;
-import com.www.opeartor.core.entity.CommonEntity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 import java.util.Date;
 
-/**
- * 新闻
- * @author  hwg
- */
-@CustomTable(tableName="op_artic")
-public class Artic extends CommonEntity{
+
+public class Artic{
 	
 	private Integer id;
 	
@@ -33,6 +27,18 @@ public class Artic extends CommonEntity{
 	private String imgUrl;
 	
 	private String videoUrl;
+	
+	private Integer number;
+	
+	
+
+	public Integer getNumber() {
+		return number;
+	}
+
+	public void setNumber(Integer number) {
+		this.number = number;
+	}
 
 	public Integer getId() {
 		return id;

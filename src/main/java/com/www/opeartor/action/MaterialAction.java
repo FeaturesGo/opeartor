@@ -3,7 +3,7 @@ package com.www.opeartor.action;
 import com.www.opeartor.entity.Material;
 import com.www.opeartor.etc.Env;
 import com.www.opeartor.serviceImpl.MaterialServiceImpl;
-import com.www.opeartor.utils.DateConversion;
+import com.www.opeartor.utils.DateUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ import java.util.UUID;
 
 /***
  * 素材管理
- * @author hwg
+ * @author wangweiwei
  *
  */
 @Controller
@@ -64,7 +64,7 @@ public class MaterialAction {
 		Map<String,Object> result = new HashMap<>();
 		try {
 			String chushipath = en.getKey("materialDir");
-			String dir = DateConversion.getNowFormat();
+			String dir = DateUtil.getNowFormat();
 			String filena = UUID.randomUUID().toString().replaceAll("-", "")+".jpg";
 			File targetFile = new File(chushipath+File.separator+dir, filena);  
 	        if(!targetFile.exists()){  

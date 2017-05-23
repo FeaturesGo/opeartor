@@ -1,5 +1,7 @@
 package com.www.opeartor.test;
 
+import java.util.concurrent.CountDownLatch;
+
 /**
  * 单例模式
  * 1.私有的静态的实例对象 private static instance
@@ -23,5 +25,35 @@ public class Emperor {
 
     public void getName(){
         System.out.println("测试单例");
+    }
+
+    /**
+     * 测试单例方法
+     * @param args
+     */
+    public static void main(String[] args) {
+        final CountDownLatch latch = new CountDownLatch(1);
+        int threadCount = 1000;
+
+        for (int i = 0; i < threadCount; i++) {
+            new Thread() {
+
+                @Override
+                public void run() {
+                    try {
+                        // all thread to wait
+                        latch.await();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    // test get instance
+                    System.out.println(Emperor.getInstance().hashCode());
+                }
+            }.start();
+        }
+
+        // release lock, let all thread excute Singleton.getInstance() at the same time
+        latch.countDown();
     }
 }

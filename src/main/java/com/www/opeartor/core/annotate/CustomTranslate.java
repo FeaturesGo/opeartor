@@ -7,9 +7,7 @@ import java.lang.annotation.Target;
 
 /***
  * 
- * @author hwg
- *@Retention 注解会在class字节码文件中存在，在运行时可以通过反射获取到
- *@Target  字段、枚举的常量
+ * @author wangweiwei
  *
  */
 @Target(ElementType.FIELD)

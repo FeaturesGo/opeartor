@@ -1,6 +1,6 @@
 package com.www.opeartor.serviceImpl;
 
-import com.www.opeartor.dao.LoginDao;
+import com.www.opeartor.dao.LoginDaoMapper;
 import com.www.opeartor.entity.Operator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.Map;
 public class LoginServiceImpl {
 	
 	@Autowired
-	private LoginDao LoginDao;
+	private LoginDaoMapper LoginDao;
 
 	public Map<String, Object> loginValidata(String userName, String userPwd) {
 		Map<String, Object> result = new HashMap<>();
@@ -26,6 +26,9 @@ public class LoginServiceImpl {
 				result.put("data", true);
 				result.put("code", "0000");
 				result.put("codeDesc", "成功");
+			} else {
+				result.put("code", "0002");
+				result.put("codeDesc", "密码错误");
 			}
 		}
 		

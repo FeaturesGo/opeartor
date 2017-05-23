@@ -7,14 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.www.opeartor.entity.Tourist;
+import com.www.opeartor.entity.Tourist; 
 import com.www.opeartor.serviceImpl.TouristServiceImpl;
 
-/**
- * 联系我们的控制层
- * @author  hwg
- *
- */
 @Controller
 public class ContactusAction {
 	
@@ -22,10 +17,10 @@ public class ContactusAction {
 
 	@Autowired
 	private TouristServiceImpl touristServiceImpl;
-
+	
 	@RequestMapping(path="tourist/contactusView")
 	public Object contactusView() {
-		return "tourist/contactusView";
+		return "tourist/contactusView"; 
 	}
 	
 	@ResponseBody
@@ -34,6 +29,6 @@ public class ContactusAction {
 		
 		logger.info("提交的表单数据：{}",tourist);
 		touristServiceImpl.saveTourist(tourist);
-		return "";
+		return ""; 
 	}
 }

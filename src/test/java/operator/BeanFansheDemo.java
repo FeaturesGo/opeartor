@@ -1,10 +1,11 @@
 package operator;
 
-import com.www.opeartor.entity.Artic;
-import org.apache.commons.beanutils.PropertyUtils;
-
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;
+
+import org.apache.commons.beanutils.PropertyUtils;
+
+import com.www.opeartor.entity.Artic;
 
 public class BeanFansheDemo {
 

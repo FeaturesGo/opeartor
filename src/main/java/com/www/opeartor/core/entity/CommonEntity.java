@@ -3,7 +3,7 @@ package com.www.opeartor.core.entity;
 
 /***
  * 
- * @author hwg
+ * @author wangweiwei
  *
  */
 public class CommonEntity {

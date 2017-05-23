@@ -162,7 +162,7 @@
         $.ajax({
             url: '<s:url value="/tourist/saveTourist"></s:url>',
             //url:"${pageContext.request.contextPath}",
-            type:'get',
+            type:'post',
             data: $('#leaveMessage').serialize(),
             success: function (object, array) {
                 alert("成功了");

@@ -6,16 +6,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
 import java.util.Map;
 
-/**
- * 文章控制层
- * @author hwg
- *
- *
- */
 @Controller
 public class ArticAction {
 	
@@ -24,12 +21,37 @@ public class ArticAction {
 	@Autowired
 	private ArticServiceImpl articServiceImpl;
 	
+	
+	@RequestMapping(path="/artic/saveView")
+	public Object saveview (Artic artic) {
+		return "artic/addartic";
+	}
+	
+	
+	@RequestMapping(path="/artic/articListView")
+	public Object articListView () {
+		return "artic/articList";
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping(path="/artic/articListData",produces="application/json;charset=UTF-8")
+	public Object articListData (String currentPage,String pageSize,Model model) {
+		currentPage = currentPage==null?"1":currentPage;
+		pageSize = pageSize ==null?"10":pageSize;
+		List<Artic> result = articServiceImpl.getArticListData(Integer.valueOf(currentPage),Integer.valueOf(pageSize));
+		return result;
+	}
+	
+	
+	
+	
 	@RequestMapping(path="/artic/saveArtic")
 	public Object saveArtic (Artic artic) {
 		
 		logger.debug("文章保存");
 		Map<String,Object> result = articServiceImpl.saveArtic(artic);
-		return result;
+		return "redirect:/artic/articListView";
 	}
 	
 	
@@ -52,12 +74,18 @@ public class ArticAction {
 	
 	
 	@RequestMapping(path="/artic/getArticList")
-	public Object getArticList (Artic artic) {
+	public Object getArticList (String currentPage,String pageSize) {
 		
-		logger.debug("文章修改");
-		Map<String,Object> result = articServiceImpl.updateArtic(artic);
+		logger.debug("获取文章列表");
+		logger.debug("参数currentPage :{},pageSize:{}",currentPage,pageSize);
+		currentPage = currentPage==null?"1":currentPage;
+		pageSize = pageSize ==null?"10":pageSize;
+		Map<String,Object> result = articServiceImpl.getArticList(Integer.valueOf(currentPage),Integer.valueOf(pageSize));
 		return result;
 	}
+	
+	
+	
 	
 	
 
