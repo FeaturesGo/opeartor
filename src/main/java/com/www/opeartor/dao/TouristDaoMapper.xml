@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.www.opeartor.dao.TouristDaoMapper">
+	
+	<insert id="save" parameterType="com.www.opeartor.entity.Tourist">
+		insert into op_tourist 
+		<trim prefix="(" suffix=")" suffixOverrides="," >
+			<if test="touristName !=null">
+				touristName,createTime,updateTime,
+			</if>
+			<if test="touristEmail !=null">
+				touristEmail,
+			</if>
+			<if test="touristPhone !=null">
+				touristPhone,
+			</if>
+			<if test="touristNeed !=null">
+				touristNeed,
+			</if>
+			<if test="touristNeedFlag !=null">
+				touristNeedFlag,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides="," >
+			<if test="touristName !=null">
+				#{touristName},now(),now(),
+			</if>
+			<if test="touristEmail !=null">
+				#{touristEmail},
+			</if>
+			<if test="touristPhone !=null">
+				#{touristPhone},
+			</if>
+			<if test="touristNeed !=null">
+				#{touristNeed},
+			</if>
+			<if test="touristNeedFlag !=null">
+				#{touristNeedFlag},
+			</if>
+		</trim>
+	</insert>
+</mapper>
