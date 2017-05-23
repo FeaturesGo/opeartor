@@ -1,12 +1,15 @@
 package com.www.opeartor.entity;
 
-import com.www.opeartor.core.annotate.CustomTranslate;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import com.www.opeartor.core.annotate.CustomTable;
+import com.www.opeartor.core.annotate.CustomTranslate;
+import com.www.opeartor.core.entity.CommonEntity;
 
 
-public class Material{
+@CustomTable(tableName="op_bd_image")
+public class Material extends CommonEntity{
 	
 	@CustomTranslate
 	private Integer id;

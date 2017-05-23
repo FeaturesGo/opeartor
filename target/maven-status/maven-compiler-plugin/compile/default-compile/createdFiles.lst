@@ -1,6 +1,7 @@
 com\www\opeartor\dao\LoginDaoMapper.class
 com\www\opeartor\test\singletion\GracefulSingleton.class
 com\www\opeartor\test\Emperor$1.class
+com\www\opeartor\test\beanUtils\OperatorTest.class
 com\www\opeartor\socket\Client.class
 com\www\opeartor\entity\Operator.class
 com\www\opeartor\utils\DateConversion.class

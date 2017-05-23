@@ -84,7 +84,7 @@
 		id,title,description,content,imgUrl,videoUrl,clickNum 
 		,case type 
 		when 1 then '新闻动态' 
-		when 2 then '美食资讯' end as description,date_format(createTime,'%Y-%m-%d %T')  createTime
+		when 2 then '美食资讯' end as typeInfo,date_format(createTime,'%Y-%m-%d %T')  createTime
 		from op_artic
 		 order by id desc limit #{start},#{pageSize}
 	</select>

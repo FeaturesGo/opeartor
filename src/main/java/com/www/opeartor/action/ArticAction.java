@@ -40,6 +40,7 @@ public class ArticAction {
 		currentPage = currentPage==null?"1":currentPage;
 		pageSize = pageSize ==null?"10":pageSize;
 		List<Artic> result = articServiceImpl.getArticListData(Integer.valueOf(currentPage),Integer.valueOf(pageSize));
+		logger.info(result);
 		return result;
 	}
 	

@@ -3,8 +3,6 @@ package com.www.opeartor.entity;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import java.util.Date;
-
 
 public class Artic{
 	
@@ -20,9 +18,9 @@ public class Artic{
 	
 	private String content;
 	
-	private Date createTime;
+	private String createTime;
 	
-	private Date updateTime;
+	private String updateTime;
 	
 	private String imgUrl;
 	
@@ -30,7 +28,18 @@ public class Artic{
 	
 	private Integer number;
 	
+	private String typeInfo;
 	
+	
+	
+
+	public String getTypeInfo() {
+		return typeInfo;
+	}
+
+	public void setTypeInfo(String typeInfo) {
+		this.typeInfo = typeInfo;
+	}
 
 	public Integer getNumber() {
 		return number;
@@ -89,19 +98,19 @@ public class Artic{
 		this.clickNum = clickNum;
 	}
 
-	public Date getCreateTime() {
+	public String getCreateTime() {
 		return createTime;
 	}
 
-	public void setCreateTime(Date createTime) {
+	public void setCreateTime(String createTime) {
 		this.createTime = createTime;
 	}
 
-	public Date getUpdateTime() {
+	public String getUpdateTime() {
 		return updateTime;
 	}
 
-	public void setUpdateTime(Date updateTime) {
+	public void setUpdateTime(String updateTime) {
 		this.updateTime = updateTime;
 	}
 	

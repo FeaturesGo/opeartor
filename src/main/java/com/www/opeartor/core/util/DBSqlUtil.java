@@ -1,15 +1,16 @@
 package com.www.opeartor.core.util;
 
-import com.www.opeartor.core.annotate.CustomTable;
-import com.www.opeartor.core.annotate.CustomTranslate;
-import com.www.opeartor.core.entity.CommonEntity;
+import java.beans.PropertyDescriptor;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.beans.PropertyDescriptor;
-import java.util.ArrayList;
-import java.util.List;
+import com.www.opeartor.core.annotate.CustomTable;
+import com.www.opeartor.core.annotate.CustomTranslate;
+import com.www.opeartor.core.entity.CommonEntity;
 
 /***
  * 
