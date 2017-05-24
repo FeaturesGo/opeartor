@@ -8,7 +8,7 @@ import com.www.opeartor.core.entity.CommonEntity;
 
 /***
  * 联系我们的提交表单
- * @author wangweiwei
+ * @author hwg
  *
  */
 @CustomTable(tableName="op_tourist")

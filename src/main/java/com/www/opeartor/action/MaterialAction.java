@@ -1,12 +1,9 @@
 package com.www.opeartor.action;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
-
+import com.www.opeartor.entity.Material;
+import com.www.opeartor.etc.Env;
+import com.www.opeartor.serviceImpl.MaterialServiceImpl;
+import com.www.opeartor.utils.DateUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +14,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.www.opeartor.entity.Material;
-import com.www.opeartor.etc.Env;
-import com.www.opeartor.serviceImpl.MaterialServiceImpl;
-import com.www.opeartor.utils.DateUtil;
+import java.io.File;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 /***
  * 素材管理
- * @author wangweiwei
+ * @author hwg
  *
  */
 @Controller

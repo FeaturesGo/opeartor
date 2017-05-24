@@ -5,7 +5,7 @@ import java.util.List;
 
 /***
  * 
- * @author wangweiwei
+ * @author hwg
  *
  */
 public class DBParamUtil {

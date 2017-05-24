@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /***
  * 
- * @author wangweiwei
+ * @author hwg
  *
  */
 @Target(ElementType.FIELD)
