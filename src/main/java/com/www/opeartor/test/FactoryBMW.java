@@ -1,0 +1,10 @@
+package com.www.opeartor.test;
+
+/**
+ * Created by Vincent on 2017/7/10.
+ */
+public interface FactoryBMW {
+
+    BMW createBMW();
+}
+

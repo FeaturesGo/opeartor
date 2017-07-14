@@ -27,6 +27,7 @@
 		<property name="driverClassName" value="${driverClass}" />
 		<property name="url" value="${dburl}" />
 		<property name="username" value="${dbusername}" />
+
 		<property name="password" value="${dbpassword}" />
 	</bean>
 
